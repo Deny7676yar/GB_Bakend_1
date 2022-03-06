@@ -73,7 +73,7 @@ linters:
     - deadcode
     - dogsled
     - dupl
-    - errcheck
+    #- errcheck
     - exportloopref
     - exhaustive
     - funlen
@@ -83,7 +83,6 @@ linters:
     - gocyclo
     - gofmt
     - goimports
-    - gomnd
     - goprintffuncname
     - gosec
     - gosimple
@@ -133,32 +132,3 @@ issues:
       text: "SA1019: lsc.Errcheck.Exclude is deprecated: use ExcludeFunctions instead"
     - path: pkg/commands/run.go
       text: "SA1019: e.cfg.Run.Deadline is deprecated: Deadline exists for historical compatibility and should not be used."
-
-
-
-run:
-  timeout: 5m
-  skip-dirs:
-    - test/testdata_etc
-    - internal/cache
-    - internal/renameio
-    - internal/robustio
-  # не включать анализ тестов
-  tests: false
-  skip-files:
-    #- ".*mocks\\$"
-    - ".CSVReaderer\\.go$"
-    - ".CSVQueryre\\.go$" #генерируемый файл для тестов
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-
